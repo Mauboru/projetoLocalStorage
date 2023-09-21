@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Local Storage</title>
+</head>
+<style>
+        body{
+            text-align:center;
+            background-color:#ffcc8e;
+        }
+
+        fieldset{
+            width: 10%;
+            align-self: center;
+        }
+
+        .button{
+            position:relative;
+            display:inline-block;
+            margin:20px;
+        }
+
+        .button a{
+            color:rgb(11, 94, 0);
+            font-family:Helvetica, sans-serif;
+            font-weight:bold;
+            font-size:20px;
+            text-align: center;
+            text-decoration:none;
+            background-color:#80ff2b;
+            display:block;
+            position:relative;
+            padding:20px 20px;
+            
+            -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+            text-shadow: 0px 1px 0px #000;
+            filter: dropshadow(color=#000, offx=0px, offy=1px);
+            
+            -webkit-box-shadow:inset 0 1px 0 #FFE5C4, 0 10px 0 #0c9100;
+            -moz-box-shadow:inset 0 1px 0 #FFE5C4, 0 10px 0 #0c9100;
+            box-shadow:inset 0 1px 0 #FFE5C4, 0 10px 0 #0c9100;
+            
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            border-radius: 5px;
+        }
+
+        .button a:active{
+            top:10px;
+            background-color:#08f700;
+            
+            -webkit-box-shadow:inset 0 1px 0 #FFE5C4, inset 0 -3px 0 #0c9100;
+            -moz-box-shadow:inset 0 1px 0 #FFE5C4, inset 0 -3pxpx 0 #0c9100;
+            box-shadow:inset 0 1px 0 #FFE5C4, inset 0 -3px 0 #0c9100;
+        }
+
+        .button:after{
+            content:"";
+            height:100%;
+            width:100%;
+            padding:4px;
+            position: absolute;
+            bottom:-15px;
+            left:-4px;
+            z-index:-1;
+            background-color:#052b00;
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            border-radius: 5px;
+        }
+</style>
+<body id="fundo">
+    <h1>Armazenamento Local</h1>
+    <br><br><br>
+    <center>
+    <!-- Campo que mostra quantas pessoas ja entraram no site -->
+    <fieldset><label id="visitantes"></label></fieldset>
+    </center>
+    <br><br><br><br><br><br>
+    <!-- Botão que muda cor do fundo -->
+    <div ontouchstart="">
+        <div class="button" onclick="mudarCor()">
+          <a href="#" id="btModo"></a>
+        </div>
+    </div>
+
+    <!-- Importe o scrip.js aqui -->
+    <script src="script.js"></script>
+</body>
+</html>
